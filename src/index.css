@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap');
+
+html, body {
+  margin: 0;
+  font-family: "Poppins";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100vh;
+  font-size: 30px;
+}
+
+
+.containerClass {
+  /* display: flex;
+  width: 100%;
+  max-width: 252.33px;
+  height: 100vh;
+
+  justify-content: space-evenly;
+
+  align-items: center;
+  margin: auto; */
+}
+.introClass {
+  position: absolute;
+  display: flex;
+  width: 100%;
+ 
+  height: 100vh;
+
+  justify-content: center;
+
+  align-items: center;
+
+  transform: translateY(-10px);
+
+  animation: introAnimation 1s ease-out 3s forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes introAnimation {
+  100% {
+    transform: translateY(0);
+
+    opacity: 0;
+    cursor: default;
+  }
+}
+
+.calcClass {
+  display: flex;
+  width: 100%;
+  max-width: 252.33px;
+  height: 100vh;
+
+  justify-content: space-evenly;
+
+  align-items: center;
+  margin: auto;
+
+  opacity: 0;
+
+  animation: showCalc 1s ease-in 4s forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.calcOn {
+  opacity: 1;
+  animation: calcOnAnimation 1s ease-out 2s forwards ;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+}
+
+@keyframes showCalc {
+  0% {
+    /* display: ; */
+    opacity: 0;
+  }
+  100% {
+    /* display: flex; */
+    opacity: 1;
+  }
+}
+
+@keyframes calcOnAnimation {
+  100% {
+    opacity: 0;
+  }
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 100%;
+
+}
+h2 {
+  font-weight: 900;
+  font-size: 100%;
+}
+
+p {
+  width: 60px;
+  font-size: 42.67px;
+
+  font-weight: 900;
+
+  cursor: default;
+  animation: setCursor 1s 3s forwards;
+
+  transition: .5s;
+
+  margin-left: 5px;
+}
+
+input {
+  width: 60px;
+  border: 1px solid white;
+
+  font-family: "Poppins";
+  font-size: 42.67px;
+  text-align: center;
+
+  font-weight: 900;
+
+  border-radius: 5px;
+
+  cursor: default;
+
+  animation: setCursor 1s 5s forwards;
+
+  margin-right: 2px;
+}
+/* input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+} */
+
+
+input:hover {
+  border: solid 1px #DEDEDE;
+  transition: .5s;
+}
+
+input:focus {
+  color: #DEDEDE;
+  border-color: #DEDEDE;
+  outline: 0;
+  /* background-color: #DEDEDE; */
+  /* border-style: solid 0px #DEDEDE; */
+
+  animation: blink 1s infinite ease-out;
+  
+}
+
+input::selection {
+color: #DEDEDE;
+
+
+}
+
+@keyframes blink {
+  0% {
+  border-color: #DEDEDE;
+    
+  } 
+  100% {
+    border-color: rgb(255, 255, 255);
+
+  }
+}
+
+.resultClass {
+  width: 42.67px;
+}
+
+
+
+@keyframes setCursor {
+  100% {
+    cursor: auto;
+  }
+}
+
+.toThankClass {
+  position: absolute;
+  display: none;
+  width: 100%;
+ 
+  height: 100vh;
+
+  justify-content: center;
+
+  align-items: center;
+  top: 0;
+
+  opacity: 0;
+  cursor: default;
+}
+.on {
+  display: flex;
+
+  
+
+  /* opacity: 1; */
+  animation: toThankanimation 1s 3s forwards;
+}
+
+@keyframes toThankanimation {
+  0% {
+    background-color: white;
+  }
+  100% {
+    opacity: 1;
+    cursor: auto;
+    background-color: white;
+  }
+}
